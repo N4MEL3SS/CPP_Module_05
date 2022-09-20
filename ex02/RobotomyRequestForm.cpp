@@ -1,9 +1,9 @@
 #include "RobotomyRequestForm.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm() \
-	: Form("RobotomyRequestForm", 72, 45)
+	: Form("Default RobotomyRequestForm", 72, 45)
 {
-	std::cout << this->_target << "Robotomy Request has been constructed" \
+	std::cout << this->_target << " Robotomy Request has been constructed" \
 		<< " (" <<this <<")" << std::endl;
 }
 
@@ -12,7 +12,7 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target) \
 {
 	this->_target = target;
 
-	std::cout << this->_target << "Robotomy Request has been constructed" \
+	std::cout << this->_target << " Robotomy Request has been constructed" \
 		<< " (" <<this <<")" << std::endl;
 }
 
@@ -21,13 +21,13 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &origin) \
 {
 	this->_target = origin.getTarget();
 
-	std::cout << this->_target << "Robotomy Request has been constructed from a copy" \
-		<< " (" <<this <<")" << std::endl;
+	std::cout << this->_target << " Robotomy Request has been constructed "
+		"from a copy" << " (" <<this <<")" << std::endl;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {
-	std::cout << this->_target << "Robotomy Request has been destroyed" \
+	std::cout << this->_target << " Robotomy Request has been destroyed" \
 		<< " (" <<this <<")" << std::endl;
 }
 

@@ -5,7 +5,7 @@ PresidentialPardonForm::PresidentialPardonForm() : \
 {
 	this->_target = "Default";
 
-	std::cout << this->_target << "Presidential Pardon has been constructed" \
+	std::cout << this->_target << " Presidential Pardon has been constructed" \
 		<< " (" <<this <<")" << std::endl;
 }
 
@@ -14,7 +14,7 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target) \
 {
 	this->_target = target;
 
-	std::cout << this->_target << "Presidential Pardon has been constructed" \
+	std::cout << this->_target << " Presidential Pardon has been constructed" \
 		<< " (" <<this <<")" << std::endl;
 }
 
@@ -24,13 +24,13 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm
 {
 	this->_target = origin.getTarget();
 
-	std::cout << this->_target << "Presidential Pardon has been constructed from a copy" \
-		<< " (" <<this <<")" << std::endl;
+	std::cout << this->_target << " Presidential Pardon has been constructed "
+		"from a copy" << " (" <<this <<")" << std::endl;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-	std::cout << this->_target << "Presidential Pardon has been destroyed" \
+	std::cout << this->_target << " Presidential Pardon has been destroyed" \
 		<< " (" <<this <<")" << std::endl;
 }
 

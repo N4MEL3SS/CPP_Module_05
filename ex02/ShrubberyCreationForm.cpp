@@ -5,16 +5,16 @@ ShrubberyCreationForm::ShrubberyCreationForm() \
 {
 	this->_target = "Default";
 
-	std::cout << this->_target << "Shrubbery Creation has been constructed" \
+	std::cout << this->_target << " Shrubbery Creation has been constructed" \
 		<< " (" <<this <<")" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string& target) \
-	: Form("Default Shrubbery Creation Form", 145, 137)
+	: Form("Shrubbery Creation Form", 145, 137)
 {
 	this->_target = target;
 
-	std::cout << this->_target << "Shrubbery Creation has been constructed" \
+	std::cout << this->_target << " Shrubbery Creation has been constructed" \
 		<< " (" <<this <<")" << std::endl;
 }
 
@@ -24,13 +24,13 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm&origin)
 {
 	this->_target = origin.getTarget();
 
-	std::cout << this->_target << "Shrubbery Creation has been constructed from a copy" \
-		<< " (" <<this <<")" << std::endl;
+	std::cout << this->_target << " Shrubbery Creation has been constructed "
+		"from a copy" << " (" <<this <<")" << std::endl;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-	std::cout << this->_target << "Shrubbery Creation has been destroyed" \
+	std::cout << this->_target << " Shrubbery Creation has been destroyed" \
 		<< " (" <<this <<")" << std::endl;
 }
 
@@ -50,19 +50,19 @@ std::string ShrubberyCreationForm::getTarget() const
 void ShrubberyCreationForm::execute(const Bureaucrat &executor) const
 {
 	std::string	tree =
-	"			&&& &&  & &&			"
-	"	  && &\\/&\\|& ()|/ @, &&		"
-	"	  &\\/(/&/&||/& /_/)_&/_&		"
-	"	&() &\\/&|()|/&\\/ '% & ()		"
-	"	&_\\_&&_\\ |& |&&/&__%_/_& &&	"
-	"	&&  && & &| &| /& & % ()& /&&	"
-	"	()&_--()&\\&\\|&&-&&--%---()~	"
-	"			  \\|||					"
-	"				|||					"
-	"				|||					"
-	"				|||					"
-	"		  , -=-~  .-^- _			"
-	"							   ejm97";
+	"			&&& &&  & &&			\n"
+	"	  && &\\/&\\|& ()|/ @, &&		\n"
+	"	  &\\/(/&/&||/& /_/)_&/_&		\n"
+	"	&() &\\/&|()|/&\\/ '% & ()		\n"
+	"	&_\\_&&_\\ |& |&&/&__%_/_& &&	\n"
+	"	&&  && & &| &| /& & % ()& /&&	\n"
+	"	()&_--()&\\&\\|&&-&&--%---()~	\n"
+	"			  \\|||					\n"
+	"				|||					\n"
+	"				|||					\n"
+	"				|||					\n"
+	"		  , -=-~  .-^- _			\n"
+	"							   ejm97\n";
 
 	if (!this->getSigned())
 		throw (Form::UnsignedFormException());
@@ -71,7 +71,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat &executor) const
 	else
 	{
 		std::string file_name = this->getTarget();
-		file_name.append("_shrubbery");
+		file_name.append("_shrubbery.txt");
 		std::ofstream out(file_name.c_str());
 
 		if (!out.is_open())
