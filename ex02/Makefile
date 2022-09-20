@@ -58,6 +58,7 @@ clean:
 fclean: clean
 	$(RM) $(OBJS_DIR_NAME)
 	$(RM) $(NAME)
+	$(RM) *.txt
 	@echo "$(RED)--- $(NAME) was deleted. ---$(END)"
 
 re: fclean all
