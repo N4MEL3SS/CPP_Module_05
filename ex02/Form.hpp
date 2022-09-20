@@ -20,7 +20,7 @@ public:
 	Form(const std::string& name, int grade_to_sign, int grade_to_execute);
 	Form(Form const &origin);
 
-	~Form();
+	virtual ~Form();
 
 	Form & operator=(Form const & ref);
 

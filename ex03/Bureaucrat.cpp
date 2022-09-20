@@ -42,6 +42,15 @@ Bureaucrat::~Bureaucrat()
 	std::cout << this->_name << " has been destroyed" << " (" << this << ")\n";
 }
 
+int Bureaucrat::getGrade() const
+{
+	return this->_grade;
+}
+
+std::string Bureaucrat::getName() const
+{
+	return this->_name;
+}
 
 void Bureaucrat::incrementGrade()
 {
@@ -100,16 +109,6 @@ void Bureaucrat::executeForm(Form const & form)
 			<< this->_grade << " cannot execute " << form << " because " \
 				<< err.what() << std::endl;
 	}
-}
-
-int Bureaucrat::getGrade() const
-{
-	return this->_grade;
-}
-
-std::string Bureaucrat::getName() const
-{
-	return this->_name;
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()

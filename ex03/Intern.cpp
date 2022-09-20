@@ -25,7 +25,7 @@ Intern &Intern::operator = (const Intern &origin)
 	return *this;
 }
 
-Form *Intern::makeForm(std::string name, std::string target)
+Form *Intern::makeForm(const std::string& name, const std::string& target)
 {
 	Form *form;
 	int indexForm = NOT_FOUND_FORM;

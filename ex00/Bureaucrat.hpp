@@ -18,6 +18,12 @@ public:
 
 	Bureaucrat& operator = (Bureaucrat const& origin);
 
+	int getGrade() const;
+	std::string getName() const;
+
+	void incrementGrade();
+	void decrementGrade();
+
 	class GradeTooHighException: public std::exception
 	{
 		virtual const char* what() const throw();
@@ -27,12 +33,6 @@ public:
 	{
 		virtual const char* what() const throw();
 	};
-
-	int getGrade() const;
-	std::string getName() const;
-
-	void incrementGrade();
-	void decrementGrade();
 
 private:
 	std::string _name;

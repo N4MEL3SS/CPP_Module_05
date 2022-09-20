@@ -21,7 +21,7 @@ public:
 
 	Intern & operator = (Intern const &origin);
 
-	Form *makeForm(std::string form_name, std::string form_target);
+	static Form *makeForm(const std::string& form_name, const std::string& form_target);
 
 	class FormNotFoundException : public std::exception
 	{

@@ -19,7 +19,6 @@ Bureaucrat::Bureaucrat(const std::string& name, int grade) : _name(name)
 	}
 }
 
-
 Bureaucrat::Bureaucrat(const Bureaucrat &origin)
 {
 	this->_name = origin.getName() + "_copy";
@@ -42,6 +41,15 @@ Bureaucrat::~Bureaucrat()
 	std::cout << this->_name << " has been destroyed" << " (" << this << ")\n";
 }
 
+int Bureaucrat::getGrade() const
+{
+	return this->_grade;
+}
+
+std::string Bureaucrat::getName() const
+{
+	return this->_name;
+}
 
 void Bureaucrat::incrementGrade()
 {
@@ -67,16 +75,6 @@ void Bureaucrat::decrementGrade()
 		this->_grade++;
 
 	std::cout << "New grade: " << this->_grade << "\n";
-}
-
-int Bureaucrat::getGrade() const
-{
-	return this->_grade;
-}
-
-std::string Bureaucrat::getName() const
-{
-	return this->_name;
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
