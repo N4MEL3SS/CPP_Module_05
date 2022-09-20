@@ -5,7 +5,6 @@
 
 int main()
 {
-	std::cout << std::endl;
 	std::cout << "CONSTRUCTING FORM:" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 
@@ -36,8 +35,10 @@ int main()
 
 	Bureaucrat	bob("Bob", 8);
 	Bureaucrat	bill("Bill", 76);
-
 	std::cout << std::endl;
+	//-----------------------------------------------------
+
+
 	std::cout << "SIGN FORMS:" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 
@@ -50,6 +51,8 @@ int main()
 	std::cout << "SIGN BILL:" << std::endl;
 	bill.signForm(c_form);
 	bill.signForm(d_form);
+	//-----------------------------------------------------
+
 
 	std::cout << std::endl;
 	std::cout << "DESTRUCTORS:" << std::endl;
