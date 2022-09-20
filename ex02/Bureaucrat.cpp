@@ -80,9 +80,25 @@ void Bureaucrat::signForm(class Form &form)
 	}
 	catch (const std::exception& err)
 	{
-		std::cout << "Bureaucrat " << this->_name << " with a grade " << \
-			this->_grade << " cannot sign " << form << " because " << err.what() \
-				<< std::endl;
+		std::cout << "Bureaucrat " << this->_name << " with a grade " \
+			<< this->_grade << " cannot sign " << form << " because " \
+				<< err.what() << std::endl;
+	}
+}
+
+void Bureaucrat::executeForm(Form const & form)
+{
+	try
+	{
+		form.execute(*this);
+
+		std::cout << this->_name << " successfully executed " << form << std::endl;
+	}
+	catch (std::exception& err)
+	{
+		std::cout << "Bureaucrat " << this->_name << " with a grade " \
+			<< this->_grade << " cannot execute " << form << " because " \
+				<< err.what() << std::endl;
 	}
 }
 

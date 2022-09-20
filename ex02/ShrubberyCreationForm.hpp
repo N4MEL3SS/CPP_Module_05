@@ -24,7 +24,7 @@ public:
 	void execute(Bureaucrat const & executor) const;
 
 private:
-	std::string	_target;
+	std::string _target;
 };
 
 #endif //SHRUBBERY_CREATION_FORM_HPP

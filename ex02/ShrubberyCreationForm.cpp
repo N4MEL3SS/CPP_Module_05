@@ -70,7 +70,9 @@ void ShrubberyCreationForm::execute(const Bureaucrat &executor) const
 		throw (Form::GradeTooLowException());
 	else
 	{
-		std::ofstream out("tree.txt");
+		std::string file_name = this->getTarget();
+		file_name.append("_shrubbery");
+		std::ofstream out(file_name.c_str());
 
 		if (!out.is_open())
 		{
