@@ -1,11 +1,17 @@
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 
+#pragma once
+
 # include <string>
 # include <iostream>
 
+# include "Form.hpp"
+
 #define MIN_GRADE 150
 #define MAX_GRADE 1
+
+class Form;
 
 class Bureaucrat
 {
@@ -18,6 +24,14 @@ public:
 
 	Bureaucrat& operator = (Bureaucrat const& origin);
 
+	int getGrade() const;
+	std::string getName() const;
+
+	void incrementGrade();
+	void decrementGrade();
+
+	void signForm(Form &form);
+
 	class GradeTooHighException: public std::exception
 	{
 		virtual const char* what() const throw();
@@ -27,12 +41,6 @@ public:
 	{
 		virtual const char* what() const throw();
 	};
-
-	int getGrade() const;
-	std::string getName() const;
-
-	void incrementGrade();
-	void decrementGrade();
 
 private:
 	std::string _name;
