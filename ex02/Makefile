@@ -7,13 +7,19 @@ RM = rm -rf
 
 #	HEADER
 HEAD_DIR = ./
-HEADS =	Bureaucrat.hpp			\
-		Form.hpp
+HEADS =	Bureaucrat.hpp					\
+		Form.hpp						\
+		PresidentialPardonForm.hpp		\
+		RobotomyRequestForm.hpp			\
+		ShrubberyCreationForm.hpp
 
 #	SOURCE
 SRCS_DIR = ./
-SRCS =	Bureaucrat.cpp			\
-		Form.cpp				\
+SRCS =	Bureaucrat.cpp					\
+		Form.cpp						\
+		PresidentialPardonForm.cpp		\
+		RobotomyRequestForm.cpp			\
+		ShrubberyCreationForm.cpp		\
 		main.cpp
 
 #	OBJECT_FILES
