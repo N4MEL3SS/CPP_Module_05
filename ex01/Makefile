@@ -1,4 +1,4 @@
-NAME = ex00
+NAME = ex01
 CXX = clang++
 INCLUDES = -I $(HEAD_DIR)
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98

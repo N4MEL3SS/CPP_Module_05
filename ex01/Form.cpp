@@ -75,8 +75,8 @@ void	Form::beSigned(Bureaucrat &bureaucrat)
 
 	if (grade > _gradeToSign)
 	{
+		_isSigned = false;
 		throw (Form::GradeTooLowException());
-		return ;
 	}
 
 	_isSigned = true;
@@ -96,8 +96,8 @@ const char* Form::GradeTooHighException::what() const throw()
 
 std::ostream &operator << ( std::ostream &out, Form const &form)
 {
-	out << "Form " << form.getName() << " having a grade_to_sign " \
-		<< form.getGradeToSign() << " and a grade_to_execute " \
+	out << "Form " << form.getName() << " having a grade to sign " \
+		<< form.getGradeToSign() << " and a grade to execute " \
 			<< form.getGradeToExecute() << " with signed equal to " \
 				<< form.getSigned();
 

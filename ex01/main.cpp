@@ -5,15 +5,14 @@
 
 int main()
 {
-	Bureaucrat	bob("Bob", 1);
-	Bureaucrat	bill("Bill", 132);
-
 	std::cout << std::endl;
 	std::cout << "CONSTRUCTING FORM:" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 
-	Form c_form("C14", 4, 6);
-	Form d_form("D02", 146, 135);
+	Form c_form("C14", 10, 5);
+	Form d_form("D02", 100, 75);
+
+	std::cout << std::endl;
 
 	try
 	{
@@ -34,15 +33,23 @@ int main()
 	}
 
 	std::cout << std::endl;
+
+	Bureaucrat	bob("Bob", 8);
+	Bureaucrat	bill("Bill", 76);
+
+	std::cout << std::endl;
 	std::cout << "SIGN FORMS:" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 
-	std::cout << "SIGN OK:" << std::endl;
+	std::cout << "SIGN BOB:" << std::endl;
 	bob.signForm(c_form);
+	bob.signForm(d_form);
+
 	std::cout << std::endl;
 
-	std::cout << "SIGN KO:" << std::endl;
+	std::cout << "SIGN BILL:" << std::endl;
 	bill.signForm(c_form);
+	bill.signForm(d_form);
 
 	std::cout << std::endl;
 	std::cout << "DESTRUCTORS:" << std::endl;
